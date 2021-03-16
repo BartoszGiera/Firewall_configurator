@@ -1,0 +1,70 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:Firewall_config.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="Firewall_config.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Firewall_config"
+		Width="800"
+		Height="480"
+		Background="#2d2a36"
+		>
+	
+	<Border Padding="10">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="80" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+			
+			<Button Classes="nav" Grid.Column="0"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Menu">
+			Menu</Button>
+			<Button Classes="nav" Grid.Column="1"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question1">
+			#1</Button>
+			<Button Classes="nav" Grid.Column="2"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question2">
+			#2</Button>
+			<Button Classes="nav" Grid.Column="3"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question3">
+			#3</Button>
+			<Button Classes="nav" Grid.Column="4"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question4">
+			#4</Button>
+			<Button Classes="nav" Grid.Column="5"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question5">
+			#5</Button>
+			<Button Classes="nav" Grid.Column="6"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question6">
+			#6</Button>
+			<Button Classes="nav" Grid.Column="7"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question7">
+			#7</Button>
+			<Button Classes="nav" Grid.Column="8"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Question8">
+			#8</Button>
+			<Button Classes="nav" Grid.Column="9"
+					Command="{Binding UpdateViewCommand}" CommandParameter="Configuration">
+			Config</Button>
+			</Grid>
+		<ContentControl Grid.Row="1"
+			Content="{Binding SelectedViewModel}" />
+		</Grid>
+	</Border>
+
+</Window>

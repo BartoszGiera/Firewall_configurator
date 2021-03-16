@@ -1,0 +1,87 @@
+﻿<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Firewall_config"
+			 xmlns:views="clr-namespace:Firewall_config.Views"
+			 xmlns:viewmodels="clr-namespace:Firewall_config.ViewModels"
+             x:Class="Firewall_config.App">
+    <Application.DataTemplates>
+		<DataTemplate DataType="{x:Type viewmodels:MenuViewModel}">
+			<views:MenuView/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question1ViewModel}">
+			<views:Question1View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question2ViewModel}">
+			<views:Question2View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question3ViewModel}">
+			<views:Question3View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question4ViewModel}">
+			<views:Question4View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question5ViewModel}">
+			<views:Question5View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question6ViewModel}">
+			<views:Question6View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question7ViewModel}">
+			<views:Question7View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:Question8ViewModel}">
+			<views:Question8View/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:ConfigurationViewModel}">
+			<views:ConfigurationView/>
+		</DataTemplate>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+        <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
+		
+		<Style Selector="Button">
+			<Setter Property="FontFamily" Value="resm:Firewall_config.Assets.Fonts.Roboto-M.ttf?assembly=Firewall_config#Roboto" />
+			<Setter Property="FontSize" Value="25" />
+			<Setter Property="Foreground" Value="#908c9c" />
+			<Setter Property="Background" Value="#2d2a36" />
+			<Setter Property="Margin" Value="4" />
+			<Setter Property="BorderThickness" Value="0" />
+			<Setter Property="Width" Value="100"/>
+			<Setter Property="Height" Value="50" />
+		</Style>
+
+		<Style Selector="Button.nav">
+			<Setter Property="FontFamily" Value="resm:Firewall_config.Assets.Fonts.Roboto.ttf?assembly=Firewall_config#Roboto" />
+			<Setter Property="FontSize" Value="20" />
+			<Setter Property="Foreground" Value="#908c9c" />
+			<Setter Property="Background" Value="#2d2a36" />
+			<Setter Property="BorderThickness" Value="0" />
+			<Setter Property="Width" Value="70"/>
+			<Setter Property="Height" Value="30" />
+			<Setter Property="Padding" Value="2, 0, 2, 0" />
+		</Style>
+		
+		<Style Selector="TextBlock.opis">
+			<Setter Property="FontFamily" Value="resm:Firewall_config.Assets.Fonts.Roboto-Thin.ttf?assembly=Firewall_config#Roboto" />
+			<Setter Property="FontSize" Value="35" />
+			<Setter Property="Foreground" Value="#908c9c" />
+		</Style>
+
+		<Style Selector="TextBox">
+			<Setter Property="Background" Value="#6b6482" />
+			<Setter Property="FontSize" Value="20" />
+			<Setter Property="BorderThickness" Value="0" />
+		</Style>
+
+		<Style Selector="ComboBox">
+			<Setter Property="Height" Value="30" />
+			<Setter Property="Width" Value="90" />
+			<Setter Property="Margin" Value="2" />
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="Background" Value="#6b6482" />
+		</Style>
+		
+    </Application.Styles>
+</Application>

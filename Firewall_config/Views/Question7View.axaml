@@ -1,0 +1,53 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Firewall_config.Views.Question7View">
+
+			<Grid>
+
+				<Grid.RowDefinitions>
+					<RowDefinition Height="3*" />
+					<RowDefinition Height="3*" />
+					<RowDefinition Height="2*" />
+					<RowDefinition Height="2*" />
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="2*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="2*" />
+				</Grid.ColumnDefinitions>
+
+
+				<TextBox Name="adresyIP" Text="{Binding IP}"
+						 Watermark="Adresy oddziel przecinkiem, np.: 192.168.0.43,10.0.2.0/24" TextWrapping="Wrap"
+						 AcceptsReturn="True"
+						 Background="#6b6482" BorderThickness="0" FontSize="20"
+						 Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
+				</TextBox>
+
+				<TextBlock Classes="opis"
+						TextWrapping="Wrap" TextAlignment="Center"
+						HorizontalAlignment="Center" VerticalAlignment="Top"
+						Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
+						Text="Podaj adresy IP, które chcesz zablokować (Upload)">
+				</TextBlock>
+				<TextBlock Classes="opis"
+					TextAlignment="Center" FontSize="30"
+					HorizontalAlignment="Center" VerticalAlignment="Center"
+					Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+					Text="Pytanie #7">
+				</TextBlock>
+
+				<Button Name="zapiszButton" Click="Click_Zapisz" Command="{Binding Zapisz}"
+						Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"
+						HorizontalAlignment="Center">
+					Zapisz
+				</Button>
+
+			</Grid>
+
+</UserControl>

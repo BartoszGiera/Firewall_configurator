@@ -1,0 +1,122 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Firewall_config.Views.ConfigurationView">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="3*" />
+			<ColumnDefinition Width="5" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="3*" />
+			<ColumnDefinition Width="5" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="30" />
+		</Grid.ColumnDefinitions>
+
+		<ComboBox Name="ruleChainComboBox" SelectedItem="{Binding RuleChain}"
+				  Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left"
+				  SelectedIndex="0" Width="100">
+			<ComboBoxItem Content="RULE CHAIN" />
+			<ComboBoxItem Content="INPUT"/>
+			<ComboBoxItem Content="FORWARD" />
+			<ComboBoxItem Content="OUTPUT" />
+		</ComboBox>
+
+		<ComboBox Name="protocolComboBox" SelectedItem="{Binding Protocol}"
+				  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"
+				  SelectedIndex="0">
+			<ComboBoxItem Content="PROTOCOL" />
+			<ComboBoxItem Content="all" />
+			<ComboBoxItem Content="tcp" />
+			<ComboBoxItem Content="udp" />
+			<ComboBoxItem Content="icmp" />
+		</ComboBox>
+
+		<TextBox Name="sourceIPTextBox" Text="{Binding SourceIP}"
+				 Grid.Row="0" Grid.Column="2"
+				 Height="30" Width="150"
+				 FontSize="15"
+				 Watermark="Source">
+		</TextBox>
+
+		<TextBlock Classes="opis"
+				   Grid.Row="0" Grid.Column="3"
+				   FontSize="20" FontFamily="Arial" FontWeight="Bold"
+				   HorizontalAlignment="Left" VerticalAlignment="Center">
+		:</TextBlock>
+
+		<TextBox Name="sourcePortTextBox" Text="{Binding SourcePort}" IsEnabled="{Binding IsPortEnabled}"
+				 Grid.Row="0" Grid.Column="4"
+				 Height="30" Width="50"
+				 FontSize="15"
+				 Watermark="Port">			
+		</TextBox>
+
+		<TextBox Name="destinationIPTextBox" Text="{Binding DestinationIP}"
+				 Grid.Row="0" Grid.Column="5"
+				 Height="30" Width="150"
+				 FontSize="15"
+				 Watermark="Destination">
+		</TextBox>
+
+		<TextBlock Classes="opis"
+				   Grid.Row="0" Grid.Column="6"
+				   FontSize="20" FontFamily="Arial" FontWeight="Bold"
+				   HorizontalAlignment="Left" VerticalAlignment="Center">
+		:</TextBlock>
+
+		<TextBox Name="destinationPortTextBox" Text="{Binding DestinationPort}" IsEnabled="{Binding IsPortEnabled}" 
+				 Grid.Row="0" Grid.Column="7"
+				 Height="30" Width="50"
+				 FontSize="15"
+				 Watermark="Port">
+		</TextBox>
+
+		<ComboBox Name="actionComboBox" SelectedItem="{Binding Action}"
+				  Grid.Row="0" Grid.Column="8"
+				  SelectedIndex="0">
+			<ComboBoxItem Content="ACTION" />
+			<ComboBoxItem Content="ACCEPT" />
+			<ComboBoxItem Content="DROP" />
+			<ComboBoxItem Content="REJECT" />
+		</ComboBox>
+
+		<Button Name="addRuleButton" Command="{Binding AddRule}"
+				Grid.Row="0" Grid.Column="9"
+				Height="40" Width="40"
+				HorizontalContentAlignment="Center">
+			<Image Source="avares://Firewall_config/Assets/Icons/plus_icon.png" Stretch="Fill"/>
+		</Button>
+
+		<TextBlock Classes="opis" FontSize="30"
+				   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+				   HorizontalAlignment="Left" VerticalAlignment="Top"
+				   Text="REGUŁY IPTABLES">
+		</TextBlock>
+
+		<Button Name="zapiszButton" Command="{Binding Zapisz}"
+				Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="3"
+				Height="40" Width="110" Margin="0"
+				HorizontalAlignment="Right" VerticalAlignment="Top" VerticalContentAlignment="Top"
+				FontSize="30">
+		ZAPISZ</Button>
+
+		<TextBox Name="rulesHistory" Text="{Binding AllRules}"
+				 Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="10"
+				 FontSize="15" FontFamily="Courier New"
+				 AcceptsReturn="True">
+		</TextBox>
+	</Grid>
+</UserControl>
