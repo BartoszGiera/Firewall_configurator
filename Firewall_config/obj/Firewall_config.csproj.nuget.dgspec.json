@@ -1,32 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Visual Studio Projects\\Firewall_config\\Firewall_config.csproj": {}
+    "D:\\Repos\\Firewall_configurator\\Firewall_config\\Firewall_config.csproj": {}
   },
   "projects": {
-    "G:\\Visual Studio Projects\\Firewall_config\\Firewall_config.csproj": {
+    "D:\\Repos\\Firewall_configurator\\Firewall_config\\Firewall_config.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Visual Studio Projects\\Firewall_config\\Firewall_config.csproj",
+        "projectUniqueName": "D:\\Repos\\Firewall_configurator\\Firewall_config\\Firewall_config.csproj",
         "projectName": "Firewall_config",
-        "projectPath": "G:\\Visual Studio Projects\\Firewall_config\\Firewall_config.csproj",
+        "projectPath": "D:\\Repos\\Firewall_configurator\\Firewall_config\\Firewall_config.csproj",
         "packagesPath": "C:\\Users\\djbar\\.nuget\\packages\\",
-        "outputPath": "G:\\Visual Studio Projects\\Firewall_config\\obj\\",
+        "outputPath": "D:\\Repos\\Firewall_configurator\\Firewall_config\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "G:\\Visual Studio Projects\\Firewall_config\\NuGet.Config",
+          "D:\\Repos\\Firewall_configurator\\Firewall_config\\NuGet.Config",
           "C:\\Users\\djbar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://www.myget.org/F/avalonia-ci/api/v2": {}
         },
@@ -65,7 +66,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -74,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
